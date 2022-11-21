@@ -1,0 +1,32 @@
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/2
+
+###
+POST http://localhost:3000/users 
+Content-Type: application/json
+
+{
+  "username": "marianaabdias",
+  "password": "123",
+  "name": "Mariana Abdias Gonçalves",
+  "email": "mabdias@scoder.com.br",
+  "phonenumber": "(35) 99856-0346"
+}
+
+###
+PATCH http://localhost:3000/users/4
+Content-Type: application/json
+
+{
+  "username": "kkkkkkkk",
+  "password": "1234",
+  "name": "kkkkkkkkkk",
+  "email": "mabdias@scoder.com.br",
+  "phonenumber": "(35) 99856-0346"
+}
+
+###
+DELETE http://localhost:3000/users/4
+
