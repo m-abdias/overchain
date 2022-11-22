@@ -8,11 +8,11 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "username": "marianaabdias",
+  "username": "gabrielcardoso",
   "password": "123",
-  "name": "Mariana Abdias Gonçalves",
-  "email": "mabdias@scoder.com.br",
-  "phonenumber": "(35) 99856-0346"
+  "name": "Gabriel Cardoso",
+  "email": "gcardoso@scoder.com.br",
+  "phonenumber": "(35) 99883-5972"
 }
 
 ###
@@ -29,4 +29,33 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/users/4
+
+###
+GET http://localhost:3000/sync-exchanges
+
+###
+GET http://localhost:3000/sync-exchanges/4
+
+###
+POST http://localhost:3000/sync-exchanges 
+Content-Type: application/json
+
+{
+  "exchange": "Tether",
+  "api_key": "chavetestetether",
+  "user_id": 3
+}
+
+###
+PATCH http://localhost:3000/sync-exchanges/5
+Content-Type: application/json
+
+{
+  "exchange": "Tether",
+  "api_key": "chavetestetether",
+  "user_id": 1
+}
+
+###
+DELETE http://localhost:3000/sync-exchanges/1
 

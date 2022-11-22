@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { User } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
+import { SyncExchangesModule } from './sync_exchanges/sync_exchanges.module';
+import { SyncExchange } from './sync_exchanges/entities/sync_exchange.entity';
 
 @Module({
   imports: [
@@ -16,9 +18,10 @@ import { UsersModule } from './users/users.module';
       database: 'overchain_crypto',
       synchronize: true,
       logging: true,
-      entities: [User],
+      entities: [User, SyncExchange],
     }),
     UsersModule,
+    SyncExchangesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

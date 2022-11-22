@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { SyncExchange } from 'src/sync_exchanges/entities/sync_exchange.entity';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
 @Entity()
 export class User {
@@ -22,4 +23,7 @@ export class User {
 
   @Column({ length: 255 })
   phonenumber: string;
+
+  @OneToMany(() => SyncExchange, (exchanges) => exchanges.user)
+  exchanges: SyncExchange[];
 }
